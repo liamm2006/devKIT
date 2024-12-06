@@ -1,0 +1,158 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e7fcb, #6bc3d7);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Button Styles */
+.button-container {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.animated-btn {
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+}
+
+.animated-btn:hover {
+    background: linear-gradient(135deg, #004bb3, #3366cc);
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+    border-color: #0072ff;
+}
+
+/* Slider Styles */
+.slider-container {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+input[type="range"] {
+    width: 80%;
+    height: 12px;
+    -webkit-appearance: none;
+    background: linear-gradient(135deg, #6e7fcb, #6bc3d7);
+    border-radius: 20px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]:hover {
+    background: linear-gradient(135deg, #4c94e4, #0062ff);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #0072ff;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+progress {
+    width: 80%;
+    height: 15px;
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+progress::-webkit-progress-bar {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(135deg, #6e7fcb, #6bc3d7);
+    border-radius: 10px;
+}
+
+/* Dots Navigation */
+.dots-container {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: #4c94e4;
+}
+
+.dot.active {
+    background-color: #0062ff;
+}
+
+/* Checkbox Styles */
+.checkbox-container {
+    margin-bottom: 40px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #00c6ff;
+}
+
+/* Radio Button Styles */
+.radio-container {
+    margin-bottom: 40px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #00c6ff;
+}
+
+/* Animation für das Erscheinen von Buttons und Elementen */
+@keyframes fadeInBtn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-btn {
+    animation: fadeInBtn 0.8s ease-out forwards;
+}
