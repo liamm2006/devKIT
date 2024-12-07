@@ -1,7 +1,3 @@
-UI toolkit in html
-
-
-
 Use notify function:
 
 
