@@ -1,8 +1,8 @@
-# UI Lab
+# UI Lib
 
 Welcome to the **devKIT** repository! This project is a HTML and CSS UI Library for websites, focused on modern and responsive user interfaces with clean design and smooth animations.
 
-Current Status
+##Current Status
 
 This is an early version of the project. So far, only the **"Notify"** component is considered stable. The library will be improved over time, with new features and components planned for future updates.
 
