@@ -1,0 +1,9 @@
+Classes:
+
+"text-mode" = show a text in color (blue) (changeable)
+
+"pointer-mode" shows a pointer cursor in blue
+
+"blocked-mode" shows blocked cursor for e.g diabled buttons
+
+"custom-cursor" shows the custom cursor
