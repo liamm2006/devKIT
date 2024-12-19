@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification Button</title>
-    <link rel="stylesheet" href="notify.css">
+    <title>Custom Cursor & Context Menu</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <div class="pointer-button">(Pointer Button)</div>
+    <div class="blocked-button">(Blocked Button)</div>
+    <div class="hover-text">(Hover Text)</div>
+    <p>Right click for Context Menu</p>
+
+    <!-- Custom Context Menu -->
+    <div class="context-menu" id="contextMenu">
+        <a href="#" id="openAction"><i class="fas fa-folder"></i> Open</a>
+        <a href="#" id="saveAction"><i class="fas fa-save"></i> Save</a>
+        <a href="#" id="printAction"><i class="fas fa-print"></i> Print</a>
+        <a href="#" id="settingsAction"><i class="fas fa-cogs"></i> Settings</a>
+        <div class="divider"></div>
+        <a href="#" id="copyText"><i class="fas fa-copy"></i> Copy</a>
+        <a href="#" id="pasteText"><i class="fas fa-paste"></i> Paste</a>
+        <div class="divider"></div>
+        <a href="#" id="exitAction"><i class="fas fa-sign-out-alt"></i> Exit</a>
+    </div>
+
+    <script src="script.js"></script>
+
+
     <div class="container">
+        <h2>notification</h2>
         <button onclick="showNotification('Achtung! Wichtige Warnung!', 'alert')">Alert</button>
         <button onclick="showNotification('Hier ist eine Information.', 'info')">Info</button>
         <button onclick="showNotification('Aktion erfolgreich abgeschlossen!', 'check')">Check</button>
@@ -47,4 +72,5 @@ function showNotification(message, type = 'info') {
 }
 
 </script>
+</body>
 </html>
