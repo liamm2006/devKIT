@@ -3,48 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification Button</title>
+    <title>Ultra Smooth Notifications</title>
     <link rel="stylesheet" href="notify.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="notify.js"></script>
 </head>
 <body>
-    <div class="container">
-        <button onclick="showNotification('Achtung! Wichtige Warnung!', 'alert')">Alert</button>
-        <button onclick="showNotification('Hier ist eine Information.', 'info')">Info</button>
-        <button onclick="showNotification('Aktion erfolgreich abgeschlossen!', 'check')">Check</button>
-        <button onclick="showNotification('KI-generierte Nachricht.', 'ai')">AI</button>
+    <div class="control-panel">
+        <button class="btn alert" data-type="alert">
+            <i class="fas fa-fire"></i> Alert
+        </button>
+        <button class="btn info" data-type="info">
+            <i class="fas fa-info"></i> Info
+        </button>
+        <button class="btn success" data-type="success">
+            <i class="fas fa-check"></i> Success
+        </button>
+        <button class="btn ai" data-type="ai">
+            <i class="fas fa-robot"></i> AI
+        </button>
+        <button class="btn warning" data-type="warning">
+            <i class="fas fa-exclamation"></i> Warning
+        </button>
     </div>
-    <div id="notification" class="notification"></div>
+    
+    <div class="notification-container"></div>
 </body>
-<script>
-
-function showNotification(message, type = 'info') {
-    const notification = document.getElementById("notification");
-    let icon = '';
-    switch(type) {
-        case 'alert':
-            icon = '<i class="fas fa-exclamation-triangle"></i>';
-            break;
-        case 'info':
-            icon = '<i class="fas fa-info-circle"></i>';
-            break;
-        case 'check':
-            icon = '<i class="fas fa-check-circle"></i>';
-            break;
-    }
-    notification.innerHTML = icon + message;
-    notification.className = 'notification ' + type;
-    notification.classList.add("show");
-    
-    setTimeout(() => {
-        notification.classList.add("slide-out");
-    }, 6000);
-    
-    setTimeout(() => {
-        notification.classList.remove("show", "slide-out", type);
-    }, 7000);
-}
-
-</script>
 </html>
