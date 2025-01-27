@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Context Menu & Modern Cursor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="content">
+        <div class="hover-card" data-context="text">
+            <i class="fas fa-text-height"></i>
+            <p>Select text to see copy options</p>
+        </div>
+        
+        <div class="interactive-box" data-context="media" data-type="image">
+            <i class="fas fa-image"></i>
+            <p>Right-click media for options</p>
+        </div>
+
+        <button class="modern-btn" data-context="button">Clickable Button</button>
+        <button class="modern-btn disabled" data-context="disabled">Disabled Button</button>
+    </div>
+
+    <div class="custom-cursor"></div>
+    
+    <div class="context-menu" id="contextMenu">
+        <div class="menu-header">
+            <span class="menu-title">Actions</span>
+        </div>
+        <div class="menu-items"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
